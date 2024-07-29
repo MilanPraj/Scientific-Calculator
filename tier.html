@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Calculator</title>
+    <link rel="stylesheet" href="calc.css">
+</head>
+<script src="calculator.js">
+</script>
+<body>
+    <div class="container" id="calcA">
+        <div class="calculator">
+            <form>
+                <div class="display">
+                    <h1 class="h">Online Calculator</h1>
+                    <input type="text" name="display">
+                </div>
+                <div class="calcbuttons">
+                    <div>
+                        <input type="button" value="AC"onclick="display.value=''">
+                        <input type="button" value="DE"onclick="display.value=display.value.toString().slice(0,-1)">
+                        <input type="button" value="1"onclick="display.value=display.value+'1'">
+                        <input type="button" value="+"onclick="display.value=display.value+'+'">
+                        <input type="button" value="-"onclick="display.value=display.value+'-'">
+                    </div>
+                    <div>
+                        <input type="button" value="2"onclick="display.value=display.value+'2'">
+                        <input type="button" value="3"onclick="display.value=display.value+'3'">
+                        <input type="button" value="4"onclick="display.value=display.value+'4'">
+                        <input type="button" value="*"onclick="display.value=display.value+'*'">
+                        <input type="button" value="/"onclick="display.value=display.value+'/'">
+                    </div>
+                    <div>
+                        <input type="button" value="5"onclick="display.value=display.value+'5'">
+                        <input type="button" value="6"onclick="display.value=display.value+'6'">
+                        <input type="button" value="7" onclick="display.value=display.value+'7'">
+                        <input type="button" value="^"onclick="display.value=display.value+'pow(a,n)'">
+                        <input type="button" value="log"onclick="display.value=display.value+'log(n,a)'">
+                    </div>
+                    <div>
+                        <input type="button" value="8"onclick="display.value=display.value+'8'">
+                        <input type="button" value="9"onclick="display.value=display.value+'9'">
+                        <input type="button" value="0"onclick="display.value=display.value+'0'">
+                        <input type="button" value="."onclick="display.value=display.value+'.'">
+                        <input type="button" value="GO!" onclick="display.value=eval(display.value)">
+                    </div>
+                    <div>
+                    </div>
+                    <div>
+                        <input type="button" value="PI"onclick="display.value=display.value+'π'">
+                        <input type="button" value="E"onclick="display.value=display.value+'e'">
+                        <input type="button" value="ln"onclick="display.value=display.value+'ln(x)'">
+                        <input type="button" value=","onclick="display.value=display.value+','">
+                        <input type="button" value="cos" id="d1" onclick="display.value=display.value+'cos(x)'">
+                    </div>
+                    <div>
+                        <input type="button" value="sin" id="e1" onclick="display.value=display.value+'sin(x)'">
+                        <input type="button" value="tan" id="f1" onclick="display.value=display.value+'tan(x)'">
+                        <input type="button" value="sec" id="d1" onclick="display.value=display.value+'sec(x)'">
+                        <input type="button" value="csc" id="e1" onclick="display.value=display.value+'csc(x)'">
+                        <input type="button" value="cot" id="f1" onclick="display.value=display.value+'cot(x)'">
+                    </div>
+                    <div>
+                        <input type="button" value="acos" id="d1" onclick="display.value=display.value+'acos(x)'">
+                        <input type="button" value="asin" id="e1" onclick="display.value=display.value+'asin(x)'">
+                        <input type="button" value="atan" id="f1" onclick="display.value=display.value+'atan(x)'">
+                        <input type="button" value="asec" id="d1" onclick="display.value=display.value+'asec(x)'">
+                        <input type="button" value="acsc" id="e1" onclick="display.value=display.value+'acsc(x)'">
+                    </div>
+                    <div>
+                        <input type="button" value="acot" id="f1" onclick="display.value=display.value+'acot(x)'">
+                        <input type="button" value="cosh" id="d1" onclick="display.value=display.value+'cosh(x)'">
+                        <input type="button" value="sinh" id="e1" onclick="display.value=display.value+'sinh(x)'">
+                        <input type="button" value="tanh" id="f1" onclick="display.value=display.value+'tanh(x)'">
+                        <input type="button" value="sech" id="d1" onclick="display.value=display.value+'sech(x)'">
+                    </div>
+                    <div>
+                        <input type="button" value="csch" id="e1" onclick="display.value=display.value+'csch(x)'">
+                        <input type="button" value="coth" id="f1" onclick="display.value=display.value+'coth(x)'">
+                        <input type="button" value="acosh"onclick="display.value=display.value+'acosh(x)'">
+                        <input type="button" value="asinh"onclick="display.value=display.value+'asinh(x)'">
+                        <input type="button" value="atanh"onclick="display.value=display.value+'atanh(x)'">
+                    </div>
+                    <div>
+                        <input type="button" value="asech"onclick="display.value=display.value+'asech(x)'">
+                        <input type="button" value="acsch"onclick="display.value=display.value+'acsch(x)'">
+                        <input type="button" value="acoth"onclick="display.value=display.value+'acoth(x)'">
+                        <input type="button" value="(" id="d1" onclick="display.value=display.value+'()'">
+                        <input type="button" value=")" id="e1" onclick="display.value=display.value+')'">
+                    </div>
+                    <div>
+                        <input type="button" value="quad\/" id="f1" onclick="display.value=display.value+'quadmn(a,b,c)'">
+                        <input type="button" value="quad/\" onclick="display.value=display.value+'quadmx(a,b,c)'">
+                        <input type="button" value="!" onclick="display.value=display.value+'fact(x)'">
+                        <input type="button" value="random" onclick="display.value=display.value+'ran(x,y)'">
+                        <input type="button" value="abs" onclick="display.value=display.value+'abs(x)'">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
