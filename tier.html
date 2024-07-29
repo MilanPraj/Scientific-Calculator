@@ -4,9 +4,205 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online Calculator</title>
-    <link rel="stylesheet" href="calc.css">
+    <style>
+        *{
+    margin:0;
+    padding:0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    width:100%;
+    height:100vh;
+    background:rgb(179, 217, 255);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.calcbuttons{
+    background: rgb(0, 125, 227);
+    padding:10px;
+    border-radius:10px;
+}
+.calculator form input{
+    border:0;
+    outline:0;
+    width:60px;
+    height:60px;
+    border-radius:10px;
+    box-shadow: -8px -8px 15px rgba(255,255,255,0.1),5px 5px 15px rgba(0,0,0,0.2);
+    background: transparent;
+    font-size: 14px;
+    font-weight: 600;
+    color:cyan;
+    cursor:pointer;
+}
+form .display input{
+    text-align: right;
+    flex:1;
+    font-size:40px;
+    font-family: sans-serif;
+    background: white;
+    padding:10px;
+    border-radius:0px;
+    width:340px;
+    height:100px;
+    color:black;
+    box-shadow: none;
+
+}
+form .display2 input{
+    text-align: right;
+    flex:1;
+    font-size:10px;
+    background: white;
+    padding:10px;
+    border-radius:0px;
+    width:340px;
+    color:black;
+    box-shadow: none;
+
+}
+.calculator{
+    background: rgb(0, 125, 227);
+    border-radius:10px;
+    padding:10px;
+}
+.h{
+    color: cyan;
+    font-family: Arial, Helvetica, sans-serif;
+}
+    </style>
 </head>
-<script src="calculator.js">
+<script>
+    var π=Math.PI
+    var e=Math.E
+    var h=1e7
+    function cos(x){
+        return Math.cos(x);
+    }
+    function pow(x,y){
+        return Math.pow(x,y);
+    }
+    function log(x,y){
+        return Math.log(y)/Math.log(x);
+    }
+    function sin(x){
+        return Math.sin(x);
+    }
+    function fact(x){
+      var s=1
+      for(i=1;i<=x;i++){
+        s=s*i
+      }
+    return s
+    }
+    function floor(x){
+        return Math.floor(x);
+    }
+    function round(x){
+        return Math.round(x);
+    }
+    function ceil(x){
+        return Math.ceil(x);
+    }
+    function tan(x){
+        return Math.tan(x);
+    }
+    function sec(x){
+        return 1/Math.cos(x);
+    }
+    function csc(x){
+        return 1/Math.sin(x);
+    }
+    function cot(x){
+        return 1/Math.tan(x);
+    }
+    function acos(x){
+        return Math.acos(x);
+    }
+    function asin(x){
+        return Math.asin(x);
+    }
+    function atan(x){
+        return Math.atan(x);
+    }
+    function asec(x){
+        return Math.acos(1/x);
+    }
+    function acsc(x){
+        return Math.asin(1/x);
+    }
+    function acot(x){
+        return Math.atan(1/x);
+    }
+    function quadmn(a,b,c){
+        return -(b+pow(pow(b,2)-4*a*c,1/2))/(2*a)
+    }
+    function quadmx(a,b,c){
+        return -(b-pow(pow(b,2)-4*a*c,1/2))/(2*a)
+    }
+    function abs(x){
+        return Math.abs(x);
+    }
+    function ran(x,y){
+        return x+y*Math.random()
+    }
+    function cosh(x){
+        return Math.cosh(x);
+    }
+    function sinh(x){
+        return Math.sinh(x);
+    }
+    function tanh(x){
+        return Math.tanh(x);
+    }
+    function sech(x){
+        return 1/Math.cosh(x);
+    }
+    function csch(x){
+        return 1/Math.sinh(x);
+    }
+    function coth(x){
+        return 1/Math.tanh(x);
+    }
+    function acosh(x){
+        return Math.acosh(x);
+    }
+    function asinh(x){
+        return Math.asinh(x);
+    }
+    function atanh(x){
+        return Math.atanh(x);
+    }
+    function asech(x){
+        return Math.acosh(1/x);
+    }
+    function acsch(x){
+        return Math.asinh(1/x);
+    }
+    function acoth(x){
+        return Math.atanh(1/x);
+    }
+    function exp(x){
+        return Math.exp(x);
+    }
+function calculus(){
+    function f(x){
+        return display.value
+    }
+    var h=1e7
+    function diff(a){
+        return h*(f(a+1/h)-f(a))
+    }
+    function integ(a,b){
+        var sum=0;
+        for(i=0;i<=h;i++){
+            sum+=f(a+i/h*(b-a))
+        }
+        return sum
+    }
+}
 </script>
 <body>
     <div class="container" id="calcA">
